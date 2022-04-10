@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplikasiETS.Pages.Beranda">
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <StackLayout >
+                <StackLayout Margin="15,15,15,0"  Orientation="Horizontal">
+                    <Image Source="user.png" HorizontalOptions="Start">
+
+                    </Image>
+                    <Image Source="notif.png" HorizontalOptions="EndAndExpand">
+
+                    </Image>
+                </StackLayout>
+                <Frame BackgroundColor="#E5E5E5" HeightRequest="0" >
+                    <StackLayout VerticalOptions="Center" Margin="5,-10,5,-10" Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="loc.png"/>
+                            <Label Text="Surabaya"/>
+                        </StackLayout>
+                        <Image HorizontalOptions="EndAndExpand" Source="down.png"/>
+                    </StackLayout>
+                </Frame>
+                <CarouselView x:Name="Banner"
+                          HeightRequest="220"
+                          WidthRequest="200"
+                          Margin="0,-6.5,0,0">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Vertical">
+                                <Image HeightRequest="223" Source="{Binding ImageUrl}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <Label Text="Sedang Tayang" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="15,0,0,7"/>
+                <StackLayout Orientation="Horizontal" Margin="15,0,15,15">
+                    <Image Source="list.png" HorizontalOptions="Start"/>
+                    <Image HeightRequest="20" WidthRequest="60" Source="semua.png" HorizontalOptions="EndAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="ImgList" Tapped="ImgList_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <CarouselView x:Name="Carousel"
+                          HeightRequest="250"
+                          PeekAreaInsets="100">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Vertical">
+                                <Image  HeightRequest="200" Source="{Binding Url}"/>
+                                <Label VerticalOptions="Center" Text="{Binding Title}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <BoxView
+                HeightRequest="1"
+                Color="#808080"
+                />
+                <StackLayout Orientation="Vertical" Margin="15,0,15,0">
+                    <StackLayout>
+                        <Label Text="News !" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                        <Image HeightRequest="20" WidthRequest="60" Source="semua.png" HorizontalOptions="EndAndExpand">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="InforList" Tapped="InforList_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                    <Label Text="Informasi seputar perfilman dalam dan luar negeri" FontSize="12"/>
+                    <ListView x:Name="InfoListView"
+                          CachingStrategy="RecycleElement"
+                          ItemsSource="{Binding Informs}"
+                          HasUnevenRows="True"
+                          SeparatorVisibility="None"
+                     >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10">
+                                        <Frame CornerRadius="10">
+                                            <StackLayout Orientation="Horizontal" HeightRequest="100">
+                                                <Image HeightRequest="100" WidthRequest="50" Source="{Binding ImageUrl}"/>
+                                                <StackLayout Orientation="Vertical">
+                                                    <Label Text="{Binding Description}" FontSize="12"/>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="{Binding Seen}"/>
+                                                        <Label Text="{Binding Like}"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplikasiETS.Pages.ListFilm">
+    <ContentPage.Content>
+        <StackLayout Margin="15">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="Vector.png" WidthRequest="15" HeightRequest="15">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImgBack" Tapped="ImgBack_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Film Bioskop" FontSize="Large" HorizontalOptions="Center" Margin="10, 0, 0, 0"/>
+               
+            </StackLayout>
+            <ListView x:Name="FilmListView"
+                      CachingStrategy="RecycleElement"
+                      ItemsSource="{Binding Films}"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                      ItemTapped="FilmListView_ItemTapped"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Frame CornerRadius="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image HorizontalOptions="Start" Source="{Binding ImageUrl}" WidthRequest="100" HeightRequest="100"></Image>
+                                        <StackLayout VerticalOptions="Center">
+                                            <Label VerticalOptions="Center" Text="{Binding Title}" FontSize="12"></Label>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="star.png" WidthRequest="12" HeightRequest="12"/>
+                                                <Label VerticalOptions="Center" Text="{Binding Rating}" FontSize="12"></Label>
+                                            </StackLayout>
+                                            <Label VerticalOptions="Center" Text="{Binding Year}" FontSize="12"></Label>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Rp " FontSize="12"/>
+                                                <Label VerticalOptions="Center" Text="{Binding Price}" FontSize="12"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

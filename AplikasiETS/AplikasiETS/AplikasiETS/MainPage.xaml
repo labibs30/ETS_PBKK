@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AplikasiETS.Pages"
+       x:Class="AplikasiETS.MainPage"
+       Shell.NavBarIsVisible="False"
+       
+       >
+    <TabBar>
+        <Tab Title="Beranda"
+            Icon="home.png">
+            <ShellContent>
+                <local:Beranda Title="FirstPage"/>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Bioskop"
+            Icon="bioskopp.png">
+            <ShellContent>
+                <local:Bioskop Title="SecondPage"/>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Tiket"
+            Icon="tikett.png">
+            <ShellContent>
+                <local:Ticket Title="FirstPage"/>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Profil"
+            Icon="profill.png">
+            <ShellContent>
+                <local:Profil Title="SecondPage"/>
+            </ShellContent>
+        </Tab>
+    </TabBar>
+
+</Shell>

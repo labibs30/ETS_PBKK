@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:AplikasiETS.Renderers"
+             mc:Ignorable="d"
+             x:Class="AplikasiETS.Pages.BookingPage"
+             BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <StackLayout Margin="15,20,15,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="backicon.png"
+                       HorizontalOptions="Start"
+                       Grid.Column="0"
+                       Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImgBack" Tapped="ImgBack_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Reservasi"
+                       TextColor="White"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Center"
+                       FontSize="Title"
+                       Grid.Column="1" />
+            </Grid>
+            
+            <Frame Margin="0,30,0,0"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="#131C25">
+                        <Label Text="Phone Number:"
+                               TextColor="White"
+                               Padding="8" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="White">
+                        <renderers:BorderlessEntry Placeholder="Provide Your Phone Number"
+                                                   Keyboard="Telephone"
+                                                   TextColor="Black"
+                                                   x:Name="EntPhone" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame Margin="0,30,0,0"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="#131C25">
+                        <Label Text="QTY"
+                               TextColor="White"
+                               Padding="8" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="White">
+                        <renderers:BorderlessPicker  Margin="10"
+                                                     Title="Choose Ticket QTY"
+                                                     TextColor="Black"
+                                                     x:Name="PickerQty"
+                                                     SelectedIndexChanged="PickerQty_SelectedIndexChanged">
+                            <renderers:BorderlessPicker.Items>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                                <x:String>12</x:String>
+                                <x:String>13</x:String>
+                                <x:String>14</x:String>
+                                <x:String>15</x:String>
+                                <x:String>16</x:String>
+                                <x:String>17</x:String>
+                                <x:String>18</x:String>
+                                <x:String>19</x:String>
+                            </renderers:BorderlessPicker.Items>
+                            <renderers:BorderlessPicker.SelectedIndex>0</renderers:BorderlessPicker.SelectedIndex>
+                        </renderers:BorderlessPicker>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame Margin="0,30,0,0"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="#131C25">
+                        <Label Text="TOTAL"
+                               TextColor="White"
+                               Padding="8" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="White">
+                        <Label Padding="10">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span x:Name="SpanQty"
+                                          CharacterSpacing="2"
+                                          TextColor="Black"
+                                          Text="1" />
+                                    <Span TextColor="Black"
+                                          CharacterSpacing="2"
+                                          Text="*" />
+                                    <Span x:Name="SpanPrice"
+                                          TextColor="Black"
+                                          CharacterSpacing="2" />
+                                    <Span TextColor="Black"
+                                          CharacterSpacing="2"
+                                          Text="=" />
+                                    <Span TextColor="#F38914"
+                                          CharacterSpacing="2"
+                                          Text="Rp " />
+                                    <Span x:Name="SpanTotalPrice"
+                                          TextColor="#F38914"
+                                          CharacterSpacing="2" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Image Source="reserve.png"
+                   Margin="0,30,0,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="ImgReserve" Tapped="ImgReserve_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

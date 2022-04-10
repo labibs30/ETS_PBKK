@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplikasiETS.Pages.ProductListPage">
+    
+    <ListView x:Name="ProductListView"
+              CachingStrategy="RecycleElement"
+              ItemsSource="{Binding Products}"
+              >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Beige">
+                        <Label Text="{Binding Name}" FontSize="Large"/>
+                        <Label Text="{Binding Price}" FontSize="Large" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

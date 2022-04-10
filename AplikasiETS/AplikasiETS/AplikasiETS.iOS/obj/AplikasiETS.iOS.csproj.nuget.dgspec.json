@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS.iOS\\AplikasiETS.iOS.csproj": {}
+  },
+  "projects": {
+    "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS.iOS\\AplikasiETS.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS.iOS\\AplikasiETS.iOS.csproj",
+        "projectName": "AplikasiETS.iOS",
+        "projectPath": "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS.iOS\\AplikasiETS.iOS.csproj",
+        "packagesPath": "C:\\Users\\TUF GAMING\\.nuget\\packages\\",
+        "outputPath": "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\TUF GAMING\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS\\AplikasiETS.csproj": {
+                "projectPath": "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS\\AplikasiETS.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS\\AplikasiETS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS\\AplikasiETS.csproj",
+        "projectName": "AplikasiETS",
+        "projectPath": "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS\\AplikasiETS.csproj",
+        "packagesPath": "C:\\Users\\TUF GAMING\\.nuget\\packages\\",
+        "outputPath": "D:\\AplikasiETS\\AplikasiETS\\AplikasiETS\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TUF GAMING\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "LibVLCSharp": {
+              "target": "Package",
+              "version": "[3.6.6, )"
+            },
+            "LibVLCSharp.Forms": {
+              "target": "Package",
+              "version": "[3.6.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "Prism.Forms": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "Xam.Forms.VideoPlayer": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2401, )"
+            },
+            "YoutubeExplode": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
