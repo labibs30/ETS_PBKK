@@ -6,7 +6,10 @@
        Title="navigator"
        
        >
-    <TabBar>
+    <ShellItem Route="login">
+        <ShellContent ContentTemplate="{DataTemplate local:LoginPage}"/>
+    </ShellItem>
+    <TabBar Route="main">
         <Tab Title="Beranda"
             Icon="home.png">
             <ShellContent>

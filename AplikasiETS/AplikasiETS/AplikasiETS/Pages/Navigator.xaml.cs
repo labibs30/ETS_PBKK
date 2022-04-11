@@ -15,6 +15,7 @@ namespace AplikasiETS.Pages
         public Navigator()
         {
             InitializeComponent();
+            Routing.RegisterRoute("registration", typeof(SignupPage));
         }
     }
 }

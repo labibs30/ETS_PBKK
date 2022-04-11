@@ -11,10 +11,9 @@ namespace AplikasiETS
         public App()
         {
             InitializeComponent();
-            Device.SetFlags(new[] { "MediaElement_Experimental" });
 
-            //MainPage = new SignupPage();
-            MainPage = new NavigationPage(new SignupPage());
+            MainPage = new Navigator();
+            //MainPage = new NavigationPage(new SignupPage());
         }
 
         protected override void OnStart()
